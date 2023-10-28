@@ -27,7 +27,7 @@ from sites.views import SiteAPI
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('siteURLFile/', SiteAPI.as_view(), name='site_url'),
-    path('siteURLFile/show/', LinkAPI.as_view(), name='links')
+    path('siteURLFile/<int:site_id>/', LinkAPI.as_view(), name='links')
     # path(
     #     "sitemap.xml",
     #     sitemap,
